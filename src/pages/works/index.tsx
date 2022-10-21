@@ -18,7 +18,7 @@ const WorksItems = () => {
                 return (
                     <li key={work.title.toLowerCase()} className="w-[75%] md:w-[70%] lg:w-[60%] xl:w-[45%]">
                         <div>
-                            <Link href={"/works" + work.href}>
+                            <Link href={"/works" + work.href} scroll={false}>
                                 <a>
                                     <div className="relative w-auto h-96 rounded-3xl overflow-hidden">
                                         <Image

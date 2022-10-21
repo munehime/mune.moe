@@ -107,7 +107,7 @@ const WorksStoryboardsDetails = () => {
             <div>
                 <div className="w-full mb-4 grid grid-cols-3">
                     <div className="flex items-center">
-                        <Link href="/works/storyboards">
+                        <Link href="/works/storyboards" scroll={false}>
                             <a>
                                 <FontAwesomeIcon icon={faAngleLeft} className="h-7"/>
                             </a>

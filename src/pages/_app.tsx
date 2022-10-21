@@ -24,6 +24,8 @@ const onExitComplete = () => {
 };
 
 const App = ({ Component, pageProps, router }: AppProps) => {
+    console.log(router.asPath)
+
     return (
         <>
             <Head>
@@ -36,9 +38,9 @@ const App = ({ Component, pageProps, router }: AppProps) => {
                 <meta name="theme-color" content="#ef74cc"/>
             </Head>
             <Layout>
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" onExitComplete={onExitComplete}>
                     <motion.div
-                        key={router.route}
+                        key={router.asPath}
                         initial="initial" animate="enter" exit="exit"
                         variants={variants}
                         transition={{ duration: 0.5, ease: "easeOut" }}
