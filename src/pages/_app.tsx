@@ -24,8 +24,6 @@ const onExitComplete = () => {
 };
 
 const App = ({ Component, pageProps, router }: AppProps) => {
-    console.log(router.asPath)
-
     return (
         <>
             <Head>

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import useSWR from "swr";
 import { useRouter } from "next/router";
@@ -108,9 +108,7 @@ const WorksStoryboardsDetails = () => {
                 <div className="w-full mb-4 grid grid-cols-3">
                     <div className="flex items-center">
                         <Link href="/works/storyboards" scroll={false}>
-                            <a>
-                                <FontAwesomeIcon icon={faAngleLeft} className="h-7"/>
-                            </a>
+                            <FontAwesomeIcon icon={faAngleLeft} className="h-7"/>
                         </Link>
                     </div>
                     <h1 className="text-4xl font-semibold text-center uppercase">Storyboards</h1>

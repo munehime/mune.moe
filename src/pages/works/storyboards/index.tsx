@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import useSWR from "swr";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,9 +29,7 @@ const WorksStoryboards = () => {
                 <div className="w-full mb-4 grid grid-cols-3">
                     <div className="flex items-center">
                         <Link href="/works" scroll={false}>
-                            <a>
-                                <FontAwesomeIcon icon={faAngleLeft} className="h-7"/>
-                            </a>
+                            <FontAwesomeIcon icon={faAngleLeft} className="h-7"/>
                         </Link>
                     </div>
                     <h1 className="text-4xl font-semibold text-center uppercase">Storyboards</h1>
@@ -42,21 +40,20 @@ const WorksStoryboards = () => {
                             <li key={storyboard.beatmapSetId}>
                                 <div className="relative rounded-lg overflow-hidden">
                                     <Link href={"/works/storyboards/" + storyboard.id} scroll={false}>
-                                        <a>
-                                            <div className="relative w-auto h-96">
-                                                <Image
-                                                    src={"/assets/images/storyboards/" + storyboard.beatmapSetId + ".png"}
-                                                    alt="Screenshot of the storyboard"
-                                                    layout="fill" objectFit="cover"
-                                                />
-                                                <div
-                                                    className="absolute w-full h-full flex flex-col justify-end bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-500">
-                                                    <div className="py-4 bg-black/75 text-center">
-                                                        <h3 className="text-xl font-semibold">{storyboard.artist + " - " + storyboard.title}</h3>
-                                                    </div>
+                                        <div className="relative w-auto h-96">
+                                            <Image
+                                                src={"/assets/images/storyboards/" + storyboard.beatmapSetId + ".png"}
+                                                alt="Screenshot of the storyboard"
+                                                layout="fill"
+                                                objectFit="cover"
+                                            />
+                                            <div
+                                                className="absolute w-full h-full flex flex-col justify-end bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-500">
+                                                <div className="py-4 bg-black/75 text-center">
+                                                    <h3 className="text-xl font-semibold">{storyboard.artist + " - " + storyboard.title}</h3>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </div>
                                     </Link>
                                 </div>
                             </li>

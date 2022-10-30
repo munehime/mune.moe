@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const works: Array<{ title: string, href: string }> = [
     {
@@ -19,21 +19,20 @@ const WorksItems = () => {
                     <li key={work.title.toLowerCase()} className="w-[75%] md:w-[70%] lg:w-[60%] xl:w-[45%]">
                         <div>
                             <Link href={"/works" + work.href} scroll={false}>
-                                <a>
-                                    <div className="relative w-auto h-96 rounded-3xl overflow-hidden">
-                                        <Image
-                                            src={"/assets/images/works/" + work.title.toLowerCase() + ".png"}
-                                            alt="Screenshot of the storyboard"
-                                            layout="fill" objectFit="cover"
-                                        />
-                                        <div
-                                            className="absolute w-full h-full flex flex-col justify-end bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-500">
-                                            <div className="py-4 bg-black/75 text-center">
-                                                <h3 className="text-xl font-semibold">{work.title}</h3>
-                                            </div>
+                                <div className="relative w-auto h-96 rounded-3xl overflow-hidden">
+                                    <Image
+                                        src={"/assets/images/works/" + work.title.toLowerCase() + ".png"}
+                                        alt="Screenshot of the storyboard"
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                    <div
+                                        className="absolute w-full h-full flex flex-col justify-end bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-500">
+                                        <div className="py-4 bg-black/75 text-center">
+                                            <h3 className="text-xl font-semibold">{work.title}</h3>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </Link>
                         </div>
                     </li>
