@@ -46,26 +46,6 @@
   },
   {
     "id": 3,
-    "beatmapSetId": 771991,
-    "artist": "PinocchioP",
-    "title": "Ghosts Play to the Audience",
-    "mappers": [
-      {
-        "userId": 10489063,
-        "username": "- Rem -",
-        "country": "VN"
-      }
-    ],
-    "storyboarders": [
-      {
-        "userId": 8500334,
-        "username": "MunRika",
-        "country": "VN"
-      }
-    ]
-  },
-  {
-    "id": 4,
     "beatmapSetId": 973362,
     "artist": "Various Artists",
     "title": "Pátt!Memories",
@@ -85,7 +65,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 4,
     "beatmapSetId": 1002909,
     "artist": "polysha",
     "title": "KAMUSUSANOWO",
@@ -110,7 +90,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 5,
     "beatmapSetId": 1130076,
     "artist": "Various Artists",
     "title": "osu! Community Choice 2019",
@@ -130,7 +110,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 6,
     "beatmapSetId": 1100775,
     "artist": "Kalafina",
     "title": "Manten",
@@ -150,7 +130,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": 7,
     "beatmapSetId": 1250926,
     "artist": "Parokya Ni Edgar",
     "title": "Bagsakan (feat. Francis M, Gloc-9, Gio Fernandez)",
@@ -230,7 +210,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": 8,
     "beatmapSetId": 927425,
     "artist": "xi",
     "title": "Songs Compilation",
@@ -250,7 +230,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 9,
     "beatmapSetId": 1151309,
     "artist": "Stonebank",
     "title": "Be Alright (feat. EMEL)",
@@ -311,7 +291,7 @@
     "videoId": "qEOqWARD6fQ"
   },
   {
-    "id": 11,
+    "id": 10,
     "beatmapSetId": 1354218,
     "artist": "Doja Cat",
     "title": "Like That (feat. Gucci Mane)",
@@ -351,7 +331,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 11,
     "beatmapSetId": 1498493,
     "artist": "Uyanga Bold",
     "title": "Lullabye",
@@ -376,7 +356,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": 12,
     "beatmapSetId": 1331284,
     "artist": "myu",
     "title": "Stardust Tears",
@@ -406,7 +386,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": 13,
     "beatmapSetId": 1329045,
     "artist": "sakuraburst",
     "title": "Glacierfall (Park Remix)",
@@ -451,7 +431,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": 14,
     "beatmapSetId": 1166748,
     "artist": "Feryquitous vs xi",
     "title": "Orca",
@@ -507,7 +487,7 @@
     "videoId": "tIlOazjvCQY"
   },
   {
-    "id": 16,
+    "id": 15,
     "beatmapSetId": 1881706,
     "artist": "Sad Keyboard Guy, sleepless & Myntian",
     "title": "Alter//Strife feat. vally.exe",
