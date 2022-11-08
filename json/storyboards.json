@@ -505,5 +505,46 @@
       }
     ],
     "videoId": "tIlOazjvCQY"
+  },
+  {
+    "id": 16,
+    "beatmapSetId": 1881706,
+    "artist": "Sad Keyboard Guy, sleepless & Myntian",
+    "title": "Alter//Strife feat. vally.exe",
+    "mappers": [
+      {
+        "userId": 6248691,
+        "username": "Alvearia",
+        "country": "RU"
+      },
+      {
+        "userId": 9351565,
+        "username": "Ducky-",
+        "country": "VN"
+      },
+      {
+        "userId": 11106442,
+        "username": "Vermasium",
+        "country": "US"
+      },
+      {
+        "userId": 8266808,
+        "username": "[Boy]DaLat",
+        "country": "VN"
+      },
+      {
+        "userId": 3161834,
+        "username": "Yugu",
+        "country": "CN"
+      }
+    ],
+    "storyboarders": [
+      {
+        "userId": 8500334,
+        "username": "Mune",
+        "country": "VN"
+      }
+    ],
+    "videoId": "8ilIZmYyD2A"
   }
 ]
