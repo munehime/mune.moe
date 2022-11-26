@@ -526,5 +526,60 @@
       }
     ],
     "videoId": "8ilIZmYyD2A"
+  },
+  {
+    "id": 16,
+    "beatmapSetId": 1821204,
+    "artist": "Camellia",
+    "title": "Camellia Supermix",
+    "mappers": [
+      {
+        "userId": 4949934,
+        "username": "rubies87",
+        "country": "CA"
+      },
+      {
+        "userId": 2474015,
+        "username": "Capu",
+        "country": "DE"
+      },
+      {
+        "userId": 533210,
+        "username": "Dusk",
+        "country": "CN"
+      },
+      {
+        "userId": 8601048,
+        "username": "JarvisGaming",
+        "country": "HK"
+      },
+      {
+        "userId": 9463721,
+        "username": "Ph0eNiiXZ",
+        "country": "TH"
+      },
+      {
+        "userId": 14102976,
+        "username": "Hivie",
+        "country": "TN"
+      },
+      {
+        "userId": 7299864,
+        "username": "Axer",
+        "country": "AR"
+      }
+    ],
+    "storyboarders": [
+      {
+        "userId": 3031177,
+        "username": "Mamat",
+        "country": "ID"
+      },
+      {
+        "userId": 8500334,
+        "username": "Mune",
+        "country": "VN"
+      }
+    ]
   }
 ]
