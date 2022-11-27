@@ -5,7 +5,7 @@
 module.exports = {
     content: [
         "./src/pages/**/*.{ts,tsx}",
-        "./src/common/components/**/*.{ts,tsx}",
+        "./src/components/**/*.{ts,tsx}",
     ],
     theme: {
         extend: {

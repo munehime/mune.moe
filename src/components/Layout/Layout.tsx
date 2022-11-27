@@ -2,8 +2,8 @@ import { useRouter } from "next/router";
 import { type ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-import { Footer, Header } from "../../components";
-import { handleExitComplete } from "../../uitls";
+import { Footer, Header } from "../index";
+import { handleExitComplete } from "../../utils";
 
 type Props = {
 	children?: ReactNode;

@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { OsuLogo } from "../../components";
+import { OsuLogo } from "../index";
 
 const links: Array<{
     title: string;
