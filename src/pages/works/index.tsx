@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/legacy/image";
 
-const works: Array<{ title: string, href: string }> = [
+const works: Array<{ title: string; href: string }> = [
     {
         title: "Storyboards",
-        href: "/storyboards"
-    }
+        href: "/storyboards",
+    },
 ];
 
 const WorksItems = () => {
@@ -26,8 +26,7 @@ const WorksItems = () => {
                                         layout="fill"
                                         objectFit="cover"
                                     />
-                                    <div
-                                        className="absolute w-full h-full flex flex-col justify-end bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-500">
+                                    <div className="absolute w-full h-full flex flex-col justify-end bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-500">
                                         <div className="py-4 bg-black/75 text-center">
                                             <h3 className="text-xl font-semibold">{work.title}</h3>
                                         </div>
@@ -55,14 +54,14 @@ const Works = () => {
                 <div>
                     <div>
                         <ul className="w-full flex flex-wrap justify-center gap-12">
-                            <WorksItems/>
+                            <WorksItems />
                         </ul>
                     </div>
                     <div className="mt-10 text-center">
-                        <p>Unlisted works can be found {" "}
-                            <a
-                                href="https://github.com/munehime"
-                                className="font-bold">here
+                        <p>
+                            Unlisted works can be found{" "}
+                            <a href="https://github.com/munehime" className="font-bold">
+                                here
                             </a>
                         </p>
                     </div>

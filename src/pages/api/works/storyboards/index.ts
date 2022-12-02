@@ -5,8 +5,8 @@ import { type NextApiRequest, type NextApiResponse } from "next";
 import { Storyboard } from "../../../../interfaces";
 
 export type ResponseData = {
-    storyboards: Array<Storyboard>
-}
+    storyboards: Array<Storyboard>;
+};
 
 const handler = async (_req: NextApiRequest, res: NextApiResponse<ResponseData>) => {
     const jsonDirectory = path.join(process.cwd(), "json");
@@ -14,7 +14,7 @@ const handler = async (_req: NextApiRequest, res: NextApiResponse<ResponseData>)
     const storyboards = JSON.parse(jsonData) as Array<Storyboard>;
 
     res.status(200).json({
-        storyboards
+        storyboards,
     });
 };
 

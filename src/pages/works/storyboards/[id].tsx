@@ -14,7 +14,7 @@ const fetcher = async (url: string) => {
     const data = await res.json();
 
     if (res.status !== 200) {
-        throw  new Error(data.message);
+        throw new Error(data.message);
     }
 
     return data;
@@ -22,31 +22,23 @@ const fetcher = async (url: string) => {
 
 const UserCard = ({ user }: { user: User }) => {
     return (
-        <a
-            href={"https://osu.ppy.sh/users/" + user.userId}
-            target="_blank" rel="noopener noreferrer"
-        >
+        <a href={"https://osu.ppy.sh/users/" + user.userId} target="_blank" rel="noopener noreferrer">
             <div className="w-80 px-5 py-3 bg-black/25 hover:bg-neutral-800 rounded-xl transition-color duration-500">
                 <div className="flex space-x-3">
                     <div className="relative w-16 h-16 rounded-xl overflow-hidden">
                         <Image
                             src={"https://a.ppy.sh/" + user.userId}
                             alt={"Avatar of " + user.username}
-                            layout="fill" objectFit="cover"
+                            layout="fill"
+                            objectFit="cover"
                         />
                     </div>
                     <div>
                         <h4 className="text-xl font-bold">{user.username}</h4>
                         <div className="flex space-x-1.5 items-center">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                                className="h-5"
-                                src={getCountryFlagByCountryCode(user.country).src}
-                                alt="Flag"
-                            />
-                            <span className="text-lg">
-                                {getCountryInfoByCountryCode(user.country)?.name}
-                            </span>
+                            <img className="h-5" src={getCountryFlagByCountryCode(user.country).src} alt="Flag" />
+                            <span className="text-lg">{getCountryInfoByCountryCode(user.country)?.name}</span>
                         </div>
                     </div>
                 </div>
@@ -61,11 +53,13 @@ const UserList = ({ users }: { users: Array<User> }) => {
             {users.map((user: User) => {
                 return (
                     <li key={user.userId}>
-                        <UserCard user={{
-                            userId: user.userId,
-                            username: user.username,
-                            country: user.country
-                        }}/>
+                        <UserCard
+                            user={{
+                                userId: user.userId,
+                                username: user.username,
+                                country: user.country,
+                            }}
+                        />
                     </li>
                 );
             })}
@@ -81,18 +75,16 @@ const VideoPlayer = ({ videoId }: { videoId: string }) => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="w-[426px] h-[240px] sm:w-[640px] sm:h-[360px] lg:w-[854px] lg:h-[480px]"
-        >
-        </iframe>
+        ></iframe>
     );
 };
 
 const WorksStoryboardsDetails = () => {
-    const { query: { id } } = useRouter();
-
     const {
-        data,
-        error
-    } = useSWR(() => id && "/api/works/storyboards/" + id, fetcher);
+        query: { id },
+    } = useRouter();
+
+    const { data, error } = useSWR(() => id && "/api/works/storyboards/" + id, fetcher);
 
     if (error) return <div>failed to load</div>;
     if (!data) return <div>loading...</div>;
@@ -108,7 +100,7 @@ const WorksStoryboardsDetails = () => {
                 <div className="w-full mb-4 grid grid-cols-3">
                     <div className="flex items-center">
                         <Link href="/works/storyboards" scroll={false}>
-                            <FontAwesomeIcon icon={faAngleLeft} className="h-7"/>
+                            <FontAwesomeIcon icon={faAngleLeft} className="h-7" />
                         </Link>
                     </div>
                     <h1 className="text-4xl font-semibold text-center uppercase">Storyboards</h1>
@@ -117,13 +109,19 @@ const WorksStoryboardsDetails = () => {
                     <div className="w-2/3 mx-auto">
                         <a
                             href={"https://osu.ppy.sh/beatmapsets/" + storyboard.beatmapSetId}
-                            target="_blank" rel="noopener noreferrer"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <div className="relative w-auto h-32 rounded-3xl overflow-hidden">
                                 <Image
-                                    src={"https://assets.ppy.sh/beatmaps/" + storyboard.beatmapSetId + "/covers/cover.jpg"}
+                                    src={
+                                        "https://assets.ppy.sh/beatmaps/" +
+                                        storyboard.beatmapSetId +
+                                        "/covers/cover.jpg"
+                                    }
                                     alt="Cover image of the beatmapset"
-                                    layout="fill" objectFit="cover"
+                                    layout="fill"
+                                    objectFit="cover"
                                 />
                                 <div className="absolute w-full h-full flex flex-col justify-center bg-black/70">
                                     <div className="text-center">
@@ -141,7 +139,7 @@ const WorksStoryboardsDetails = () => {
                                 <h3 className="text-lg font-semibold">Mappers</h3>
                             </div>
                             <div>
-                                <UserList users={storyboard.mappers}/>
+                                <UserList users={storyboard.mappers} />
                             </div>
                         </div>
                         <div>
@@ -149,16 +147,16 @@ const WorksStoryboardsDetails = () => {
                                 <h3 className="text-lg font-semibold">Storyboarders</h3>
                             </div>
                             <div>
-                                <UserList users={storyboard.storyboarders}/>
+                                <UserList users={storyboard.storyboarders} />
                             </div>
                         </div>
-                        {(storyboard.videoId && storyboard.videoId !== "") && (
+                        {storyboard.videoId && storyboard.videoId !== "" && (
                             <div>
                                 <div className="mt-4 mb-2 text-center">
                                     <h3 className="text-lg font-semibold">Video</h3>
                                 </div>
                                 <div className="flex justify-center">
-                                    <VideoPlayer videoId={storyboard.videoId}/>
+                                    <VideoPlayer videoId={storyboard.videoId} />
                                 </div>
                             </div>
                         )}

@@ -10,10 +10,7 @@ import { Storyboard } from "../../../interfaces";
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const WorksStoryboards = () => {
-    const {
-        data,
-        error
-    } = useSWR("/api/works/storyboards", fetcher);
+    const { data, error } = useSWR("/api/works/storyboards", fetcher);
 
     if (error) return <div>failed to load</div>;
     if (!data) return <div>loading...</div>;
@@ -29,7 +26,7 @@ const WorksStoryboards = () => {
                 <div className="w-full mb-4 grid grid-cols-3">
                     <div className="flex items-center">
                         <Link href="/works" scroll={false}>
-                            <FontAwesomeIcon icon={faAngleLeft} className="h-7"/>
+                            <FontAwesomeIcon icon={faAngleLeft} className="h-7" />
                         </Link>
                     </div>
                     <h1 className="text-4xl font-semibold text-center uppercase">Storyboards</h1>
@@ -47,10 +44,11 @@ const WorksStoryboards = () => {
                                                 layout="fill"
                                                 objectFit="cover"
                                             />
-                                            <div
-                                                className="absolute w-full h-full flex flex-col justify-end bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-500">
+                                            <div className="absolute w-full h-full flex flex-col justify-end bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-500">
                                                 <div className="py-4 bg-black/75 text-center">
-                                                    <h3 className="text-xl font-semibold">{storyboard.artist + " - " + storyboard.title}</h3>
+                                                    <h3 className="text-xl font-semibold">
+                                                        {storyboard.artist + " - " + storyboard.title}
+                                                    </h3>
                                                 </div>
                                             </div>
                                         </div>

@@ -1,2 +1,2 @@
 export * from "./geography";
-export * from "./handlers"
+export * from "./handlers";

@@ -215,7 +215,7 @@ import zmFlag from "../../../public/assets/svgs/flags/ZM.svg";
 import zwFlag from "../../../public/assets/svgs/flags/ZW.svg";
 
 export const getCountryInfoByCountryCode = (countryCode: string) => {
-    return countriesData.find((country: { code: string, name: string }) => country.code === countryCode);
+    return countriesData.find((country: { code: string; name: string }) => country.code === countryCode);
 };
 
 export const getCountryFlagByCountryCode = (countryCode: string) => {

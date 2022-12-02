@@ -2,26 +2,29 @@ import Link from "next/link";
 import Image from "next/legacy/image";
 
 const links: Array<{
-    title: string,
-    href: string,
+    title: string;
+    href: string;
 }> = [
     {
         title: "Home",
-        href: "/"
+        href: "/",
     },
     {
         title: "Works",
-        href: "/works"
-    }
+        href: "/works",
+    },
 ];
 
 const NavItems = () => {
     return (
         <>
-            {links.map(link => {
+            {links.map((link) => {
                 return (
                     <li key={link.title.toLowerCase()}>
-                        <Link href={link.href} className="text-neutral-500 hover:text-white transition-color duration-300">
+                        <Link
+                            href={link.href}
+                            className="text-neutral-500 hover:text-white transition-color duration-300"
+                        >
                             {link.title}
                         </Link>
                     </li>
@@ -33,8 +36,7 @@ const NavItems = () => {
 
 const Header = () => {
     return (
-        <header
-            className="relative w-full flex-none border-b border-b-neutral-800 font-betvietnampro text-lg font-semibold">
+        <header className="relative w-full flex-none border-b border-b-neutral-800 font-betvietnampro text-lg font-semibold">
             <div className="max-w-8xl px-4 py-3 mx-auto">
                 <div className="flex justify-between items-center">
                     <div>
@@ -51,7 +53,7 @@ const Header = () => {
                     </div>
                     <nav>
                         <ul className="flex space-x-8">
-                            <NavItems/>
+                            <NavItems />
                         </ul>
                     </nav>
                 </div>
