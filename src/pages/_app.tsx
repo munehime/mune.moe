@@ -1,8 +1,12 @@
 import Head from "next/head";
 import { type AppProps } from "next/app";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 
 import "../styles/globals.css";
 import { Layout } from "../components";
+
+config.autoAddCss = false;
 
 const App = ({ Component, pageProps, router }: AppProps) => {
     return (
