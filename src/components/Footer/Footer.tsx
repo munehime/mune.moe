@@ -62,11 +62,11 @@ const FooterItems = () => {
                             {link.icon ? (
                                 <FontAwesomeIcon
                                     icon={link.icon}
-                                    className="h-7 text-neutral-400 hover:text-white transition-colors duration-300"
+                                    className="text-2xl text-neutral-400 hover:text-white transition-colors duration-300"
                                 />
                             ) : (
                                 link.title.toLowerCase() == "osu" && (
-                                    <OsuLogo className="h-7 text-neutral-400 hover:text-white transition-colors duration-300" />
+                                    <OsuLogo className="w-6 h-6 text-neutral-400 hover:text-white transition-colors duration-300" />
                                 )
                             )}
                         </a>
