@@ -6,10 +6,6 @@ const links: Array<{
     href: string;
 }> = [
     {
-        title: "Home",
-        href: "/",
-    },
-    {
         title: "Works",
         href: "/works",
     },
