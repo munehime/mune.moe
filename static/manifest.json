@@ -1,0 +1,8 @@
+{
+	"name": "Mune",
+	"short_name": "Mune",
+	"start_url": "/",
+	"display": "minimal-ui",
+	"background_color": "#ffffff",
+	"theme_color": "#ff3e00"
+}
