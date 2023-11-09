@@ -5,4 +5,4 @@ export function load({ url }: { url: any }) {
 	};
 }
 
-export const prerender = "auto";
+export const prerender = 'auto';

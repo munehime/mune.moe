@@ -11,7 +11,7 @@
 	const socialLinks = [
 		{
 			title: 'Facebook',
-			url: 'https://www.facebook.com/truongthinh295',
+			url: 'https://www.facebook.com/munehime',
 			icon: facebookIcon
 		},
 		{

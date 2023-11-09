@@ -14,4 +14,3 @@ export const GET: RequestHandler = async ({ params }) => {
 };
 
 export const prerender = false;
-
